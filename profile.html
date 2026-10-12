@@ -4,40 +4,165 @@
     <meta charset="UTF-8">
     <title>Resume</title>
     <style>
-        body{
-            font-family:'Times New Roman', Times, serif;
-            
-        }
-        table{
-            width:800px;
-            
-        }
-        table.td{
-            font: size 15px;
-            
-        }
-        .resume{
-            width: 800px;
-            background-color: azure;
-            padding: 20px;
-        }
-        .subheadings{
-            padding: 5px;
-            background-color: darkcyan;
-            text-align: left;
-        }
-        a{
-            color:black;
-        }
-        .name{
-            padding-top: 10px;
-            padding-right:10px ;
-            
-            text-align: left;
-            background-color: cadetblue;
-            
-        }
         
+
+body {
+    font-family:cambria,serif;
+    background-color: #e9eef5;
+    color: #263238;
+    margin: 0;
+    padding: 30px 0;
+}
+
+
+.resume {
+    width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 0 auto;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    box-sizing: content-box;
+}
+
+.name {
+    padding: 18px 20px;
+    text-align: left;
+    background-color: #17365D;
+    color: white;
+    border-left: 6px solid #4a90a4;
+    border-radius: 5px;
+}
+
+.name h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+td {
+    padding: 8px;
+    font-size: 15px;
+}
+
+
+.subheadings {
+    padding: 9px 12px;
+    background-color: #DCE6F1;
+    color: #17365D;
+    text-align: left;
+    border-left: 5px solid #17365D;
+    border-radius: 3px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid #d5dce5;
+    margin: 10px 0;
+}
+
+
+p {
+    line-height: 1.6;
+}
+
+
+table[border="2"] {
+    border: 1px solid #cbd5e1;
+}
+
+table[border="2"] th {
+    background-color: #17365D;
+    color: white;
+    padding: 10px;
+}
+
+table[border="2"] td {
+    border: 1px solid #cbd5e1;
+    padding: 9px;
+}
+
+table[border="2"] tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+
+ul {
+    line-height: 1.8;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+h4 {
+    color: #17365D;
+    margin-bottom: 5px;
+}
+
+
+a {
+    color: #176b87;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #17365D;
+    text-decoration: underline;
+}
+
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .resume {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    a {
+        color: black;
+    }
+}
+
+
+ul h4 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+ul p {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+ul li {
+    margin-bottom: 2px;
+}
+.icon{
+    font-size: 20px;
+}
+
         
     </style>
     </head>
@@ -51,12 +176,20 @@
         <div>
         <table style="width:800px;">
             <tr>
-                <td>9345716724</td>
-                <td><a href="https://www.linkedin.com/in/divya-r-7b16172a4" target="_blank">linkedin.com/in/divya-r 7b16172a4</a></td>
+                <td>
+                     <span class="icon" >&#9742;</span>
+                     9345716724</td>
+                <td>
+                    <span style="font-size: 22px;" ><b>in</b></span>
+                    <a href="https://www.linkedin.com/in/divya-r-7b16172a4" target="_blank">linkedin.com/in/divya-r-7b16172a4</a></td>
             </tr>
             <tr>
-                <td>divyaranganadhan8@gmail.com</td>
-                <td><a href="https://github.com/divya-0824" target="_blank">https://github.com/divya-0824</a></td>
+                <td>
+                     <span class="icon" >&#9993;</span>
+                     divyaranganadhan8@gmail.com</td>
+                <td>
+                    <span class="icon" >&#9671;</span>
+                    <a href="https://github.com/divya-0824" target="_blank">https://github.com/divya-0824</a></td>
             </tr>
         </table>
         </div>
@@ -70,15 +203,15 @@
          <div>
             <table border="2">
                 <tr>
-                    <th>Degree</th>
-                    <th>Institution</th>
-                    <th>year</th>
-                    <th>Percentage</th>
+                    <th>DEGREE</th>
+                    <th>INSTITUTION</th>
+                    <th>YEAR</th>
+                    <th>PERCENTAGE</th>
                 </tr>
                 <tr>
                     <td>B.E.CSE</td>
                     <td>S.A.ENGINEERING COLLEGE</td>
-                    <td>2023-2027</td>
+                    <td>2027</td>
                     <td>89%</td>
             
                 </tr>
@@ -94,14 +227,14 @@
                     <td>2021</td>
                     <td>100%</td>
                 </tr>  
-//table
+
             </table>
          </div>
          <h3 class="subheadings">SKILLS</h3>
          <hr>
          <ul style="font-size: 18px;">
             <li style="text-align: left;"><b>Frontend:</b> HTML,CSS,JS(Basics)</li>
-            <li style="text-align: left;"><b> Programming Languages:</b>Java,C,Python(Basics)</li>
+            <li style="text-align: left;"><b> Programming Languages:</b> Java,C,Python(Basics)</li>
             <li style="text-align: left;"><b>Tools:</b> Figma,Wordpress</li>
             
          </ul>
@@ -111,7 +244,7 @@
         <hr>
         <ul>
             <li style="text-align: left;font-size: 18px;"><h4>E-commerce Platform Development</h4></li>
-            <p style="text-align: left;margin-left: 50px;font-size: 18px;">Developed a online movie ticket and snacks booking website using html,css,java script . </p>
+            <p style="text-align: left;margin-left: 50px;font-size: 18px;">Developed an online movie ticket and snacks booking website using html,css,java script . </p>
             <li style="text-align: left;font-size: 18px;"><h4>MobileVerse–Mobile Review Platform</h4></li>
             <p style="text-align: left;margin-left: 50px;font-size: 18px;">Developed a MERN stack website for browsing smartphones and posting user reviews and ratings.</p>
         </ul>
@@ -122,7 +255,7 @@
             <li>Career Essentials in Software Development – LinkedIn Learning (by Microsoft)</li>
             <li>AWS Academy Graduate - Cloud Foundations - Training Badge </li>
             <li>Internship in Fullstack-Java-Approtech R & D Solutions</li>
-            <li>Internship in WordPress and Figma – Detquel Corp (June–August 2025</li>
+            <li>Internship in WordPress and Figma – Detquel Corp (June–August 2025)</li>
         </ul>
         </div>
         </center>
