@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Document
+
+        </title>
+        <style>
+            .show{
+                color:aqua;
+            }
+            .hide{
+                color:blue;
+
+            }
+        </style>
+    </head>
+    <body>
+        <button id="show">show</button>
+        <label id="ShowLabel"></label>
+        
+        <!-- <script>
+            var count=0;
+            const button=document.getElementById('count');
+            const label=document.getElementById('plus');
+            button.addEventListener('click',function(){
+                count= count+1;
+                label.textContent= `Counter:${count}`
+
+            })
+            
+        </script> -->
+        <script>
+            var boolean;
+            const  button=document.getElementById('show');
+            const label=document.getElementById('ShowLabel');
+            button.addEventListener('click',function(){
+                boolean=!boolean;
+                label.textContent=`${boolean?"Label is visible":"Label is not visilble"}`
+                label.className=boolean?'show':'hide';
+            })
+        </script>
+
+    </body>
+</html>

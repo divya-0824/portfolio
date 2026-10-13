@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Toggle</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .dark {
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Theme Change</h2>
+    <p>Click the button to change the theme.</p>
+
+    <button id="theme">Dark Mode</button>
+
+    <script>
+        var boolean = false;
+
+        const button = document.getElementById('theme');
+
+        button.addEventListener('click', function() {
+            boolean = !boolean;
+
+            document.body.className = boolean ? 'dark' : '';
+
+            button.textContent = boolean ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+
+</body>
+</html>
