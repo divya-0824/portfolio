@@ -148,15 +148,94 @@ ul li {
     font-size: 20px;
 }
 
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#photo {
+    width: 100px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: none;
+}
+
+.controls {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.controls button {
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    background-color: #17365D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.counter {
+    text-align: center;
+}
+
+/* Dark theme */
+body.dark {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+body.dark .resume {
+    background-color: #1e1e1e;
+    color: #eeeeee;
+}
+
+body.dark .subheadings {
+    background-color: #303b49;
+    color: white;
+}
+
+body.dark h4 {
+    color: #9dc7ff;
+}
+
+body.dark table[border="2"] td {
+    border-color: #555;
+}
+
+body.dark table[border="2"] tr:nth-child(even) {
+    background-color: #303030;
+}
+
+body.dark a {
+    color: #7dd3fc;
+}
+
+
         
     </style>
+    
     </head>
     <body>
+        
         <center>
         <div  class="resume">
          <div class="name" > 
         <h1 >DIVYA R</h1>
+        <img src="divya.jpg" id="photo" alt="Divya's Photo">
         </div>
+        <div class="controls">
+    <button id="photoButton">Show Photo</button>
+    <!-- <button id="hidePhoto">Hide Photo</button> -->
+    <button id="themeButton">Dark Mode</button>
+    <!-- <button id="downloadButton">Download Resume</button> -->
+</div>
+
+<!-- <p class="counter">
+    Download Count: <span id="downloadCount">0</span>
+</p> -->
         <hr>
         <div>
         <table style="width:800px;">
@@ -242,9 +321,63 @@ ul li {
             <li>Internship in Fullstack-Java-Approtech R & D Solutions</li>
             <li>Internship in WordPress and Figma – Detquel Corp (June–August 2025)</li>
         </ul>
+        <div class="controls">
+        <button id="downloadButton">Download Resume</button>
         </div>
+    
+        <p class="counter">
+    Download Count: <span id="downloadCount">0</span>
+</p>
+</div>
+
         </center>
     
+<script>
+    
+   
+   
+    const photo = document.getElementById('photo');
+    const photoButton = document.getElementById('photoButton');
 
+    photoButton.addEventListener('click', function() {
+        if (photo.style.display === 'block') {
+            photo.style.display = 'none';
+            photoButton.textContent = 'Show Photo';
+        } else {
+            photo.style.display = 'block';
+            photoButton.textContent = 'Hide Photo';
+        }
+    });
+
+    
+    const themeButton = document.getElementById('themeButton');
+
+    themeButton.addEventListener('click', function() {
+        document.body.classList.toggle('dark');
+
+        themeButton.textContent =
+            document.body.classList.contains('dark')
+            ? 'Light Mode'
+            : 'Dark Mode';
+    });
+
+    
+    let count = 0;
+
+    const downloadButton =
+        document.getElementById('downloadButton');
+
+    const downloadCount =
+        document.getElementById('downloadCount');
+
+    downloadButton.addEventListener('click', function() {
+        count++;
+        downloadCount.textContent = count;
+    });
+
+</script>
+
+</body>
+</html>
     </body>
 </html>
