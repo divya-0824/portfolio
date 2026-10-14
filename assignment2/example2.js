@@ -6,7 +6,7 @@ async function fetchUsers() {
 
         const users = await response.json();
 
-        users.map(user => console.log(user.name));
+        users.map(user => console.log(user.address.street));
     } catch (error) {
         console.log("Error fetching users:", error);
     }
